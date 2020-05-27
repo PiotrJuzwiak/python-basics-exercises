@@ -29,8 +29,12 @@ def single_trial():
 
     # Continue to flip the coin until randint(0, 1) returns something
     # different than the original flip_result
-    while flip_result == random.randint(0, 1):
-        flip_count = flip_count + 1
+    while True:
+        if first_flip == random.randint(0,1):
+            counter = counter + 1
+        else:
+            counter = counter + 1
+            break
 
     # The last step in the loop flipped the coin but didn't update the tally,
     # so we need to increase the flip_count by 1
